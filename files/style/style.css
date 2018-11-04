@@ -1,0 +1,359 @@
+@font-face {
+  font-family: Exo2;
+  src: url("../fonts/Exo2.0-Thin.otf");
+}
+@font-face {
+  font-family: "Trebuchet MS";
+  src: url("../fonts/TrebuchetMS.ttf")
+}
+@font-face {
+  font-family: "Trebuchet MS Bold";
+  src: url("../fonts/TrebuchetMS-Bold.ttf");
+}
+
+* {box-sizing: border-box;}
+
+html{
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  background: url("../images/body_background.jpg");
+  background-size: 90px;
+  height: 100vh;
+  font-family: "Trebuchet MS";
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding-bottom: 50px;
+}
+
+.welcome_header{
+  grid-column: span 12;
+  padding-top: 1.5vw;
+}
+
+.welcome_header h1{
+  font-family: Exo2;
+  color: #eee;
+  text-align: center;
+  font-size: 2.4vw;
+}
+
+.products{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: span 12;
+  margin: 0 4.077%;
+}
+
+.product{
+  position: relative;
+  background-color: #f2f2f2;
+  background-image:  url("../images/logocat.png");
+  background-size: 114%;
+  background-repeat: no-repeat;
+  background-position: 62% 168%;
+  margin: 0 13.317%;
+  height: 33.2vw;
+  border-radius: 1.1vw;
+  border: solid 0.3vw transparent;
+  -webkit-clip-path: polygon(0% 10%, 0px 100%, 100% 100%, 100% 0%, 15% 0px);
+  clip-path: polygon(0% 10%, 0px 100%, 100% 100%, 100% 0%, 15% 0px);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.product:after{
+  position: absolute;
+  width: 0;
+	height: 0;
+  display: block;
+  content: "";
+	border-top: 3.2vw solid transparent;
+	border-right: 3.2vw solid transparent;
+  top: 0;
+}
+
+.product:hover{
+  transform: scale(1.02);
+}
+
+.product_1{
+  border: solid 0.3vw #1698d9;
+}
+
+.product_1:after{
+  border-top: 3.2vw solid #1698d9;
+}
+
+.product_2{
+  border: solid 0.3vw #d91667;
+}
+
+.product_2:after{
+  border-top: 3.2vw solid #d91667;
+}
+
+.product_3{
+  border: solid 0.3vw #b3b3b3;
+}
+
+.product_3:after{
+  border-top: 3.2vw solid #b3b3b3;
+}
+
+.product .about{
+  margin: 0 15%;
+}
+
+.product .about .tagline{
+  margin: 1.154vw 0 0.5vw 0;
+  font-size: 1.1vw;
+  color: #666;
+}
+
+.product .about .brand{
+  font-family: "Trebuchet MS Bold";
+  font-size: 3.1vw;
+  margin: 0;
+}
+
+.product .about .withwhat {
+  font-size: 1.6vw;
+  margin: 0;
+}
+
+.product .about .gifts{
+  font-size: 1vw;
+  margin: 1vw 0;
+  color: #666;
+}
+
+.product .about .weight{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 0.7vw;
+  margin-bottom: 0.7vw;
+  width: 6vw;
+  height: 6vw;
+  border-radius: 50%;
+  text-align: center;
+  color: #f2f2f2;
+  font-family: "Trebuchet MS";
+  line-height: 1px;
+}
+
+.product .about .weight .number{
+  margin-top: 2.2vw;
+  font-size: 2.8vw;
+}
+
+.product .about .weight .measure{
+  margin-top: -0.8vw;
+  font-size: 1.5vw;
+}
+
+.product_1 .about .weight{
+  background: #1698d9;
+}
+
+.product_2 .about .weight{
+  background: #d91667;
+}
+
+.product_3 .about .weight{
+  background: #b3b3b3;
+}
+
+.product .about .change_icon{
+  display: none;
+  width: 2vw;
+  height: 2vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 1vw;
+  margin-top: 1vw;
+  border-radius: 50%;
+  background: #0bd40d;
+  color: #f2f2f2;
+}
+
+.product .about .change_icon .checkmark:after{
+  content: '';
+  display: block;
+  width: 0.6vw;
+  height: 1.2vw;
+  border: solid #fff;
+  border-width: 0 0.2vw 0.2vw 0;
+  transform: rotate(45deg);
+  margin: 0.2vw 0.6vw;
+}
+
+.product_ended{
+  -webkit-filter: grayscale(70%) contrast(75%);
+  -moz-filter: grayscale(70%) contrast(75%);
+  -ms-filter: grayscale(70%) contrast(75%);
+  -o-filter: grayscale(70%) contrast(75%);
+  filter: grayscale(70%) contrast(75%);
+}
+
+.subtext{
+  color: #fff;
+  text-align: center;
+  font-size: 0.9vw;
+}
+
+.subtext a{
+  color: #1698d9;
+  text-decoration: none;
+  border-bottom: 1px dashed #1698d9;
+}
+
+.product_ended_subtext{
+  color: #ffff66;
+}
+
+.product_1{
+  grid-column: 1;
+}
+
+.product_2{
+  grid-column: 2;
+}
+
+.product_3{
+  grid-column: 3;
+}
+
+
+
+.bgshadow{
+  width: 100%;
+  height: 1px;
+  box-shadow: 0px 10px 100px 50px #000;
+  background: rgba(0,0,0,0.8);
+}
+
+.bgshadow_bottom{
+  z-index: -1;
+}
+
+@media screen and (orientation: portrait){
+  .products{
+    display: inline-block;
+  }
+
+  .product_wrapper{
+    margin-bottom: 20vw;
+  }
+
+  .product{
+    border-radius: 3vw;
+    height: 97vw;
+  }
+
+  .product_1{
+    border: solid 1vw #1698d9;
+  }
+
+  .product_1:after{
+    border-top: 9.5vw solid #1698d9;
+    border-right: 9.5vw solid transparent;
+  }
+
+  .product_2{
+    border: solid 1vw #d91667;
+  }
+
+  .product_2:after{
+    border-top: 9.5vw solid #d91667;
+    border-right: 9.5vw solid transparent;
+  }
+
+  .product_3{
+    border: solid 1vw #b3b3b3;
+  }
+
+  .product_3:after{
+    border-top: 9.5vw solid #b3b3b3;
+    border-right: 9.5vw solid transparent;
+  }
+
+  .welcome_header h1{
+    font-size: 6.5vw;
+  }
+
+  .product .about .tagline{
+    font-size: 3vw;
+    margin: 4.6vw 0 1.6vw 0;
+  }
+
+  .product .about .brand{
+    font-size: 8.5vw;
+  }
+
+  .product .about .withwhat{
+    font-size: 4.5vw;
+  }
+
+  .product .about .gifts{
+    font-size: 3vw;
+    margin: 3vw 0;
+  }
+
+
+
+  .product .about .weight{
+    margin-right: 3vw;
+    margin-bottom: 3vw;
+    width: 17vw;
+    height: 17vw;
+  }
+
+  .product .about .weight .number{
+    margin-top: 6.5vw;
+    font-size: 8vw;
+  }
+
+  .product .about .weight .measure{
+    margin-top: -1.8vw;
+    font-size: 4.5vw;
+  }
+
+  .product .about .change_icon{
+    display: none;
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 4vw;
+    margin-top: 4vw;
+    border-radius: 50%;
+    background: #0bd40d;
+    color: #f2f2f2;
+    font-size: 4vw;
+  }
+
+  .product .about .change_icon .checkmark:after{
+    content: '';
+    display: block;
+    width: 1.4vw;
+    height: 2.8vw;
+    border: solid #fff;
+    border-width: 0 0.4vw 0.4vw 0;
+    transform: rotate(45deg);
+    margin: 0.6vw 1.6vw;
+  }
+
+  .subtext{
+    font-size: 2.7vw;
+  }
+
+}
