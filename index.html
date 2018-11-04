@@ -72,7 +72,6 @@
   </body>
   <script type="text/javascript">
     onresize = function(){
-      // resizeProductDivs("product");
       resizeBaseContainer('container');
     }
 
@@ -88,50 +87,6 @@
         productIcon.style.display = 'none';
       }
     }
-
-    // function resizeProductDivs(className){
-    //   // Resizing product blocks height
-    //   let products = document.getElementsByClassName(className);
-    //   let productWidth = Number((getComputedStyle(products[0]).width).slice(0, -2));
-    //   let productHeight = Number((getComputedStyle(products[0]).height).slice(0, -2));
-    //   for (let i = 0; i < products.length; i++){
-    //     products[i].style.height = String(productWidth * 1.5) +  "px";
-    //   }
-
-      // Resizing cut angle border
-      // const maskTriDep = 0.14333639345;  //Mask Triangle Dependency
-      // let newTopRight = String(productWidth * maskTriDep) + "px";
-      // let newAfter = document.head.appendChild(document.createElement("style"));
-      // newAfter.innerHTML = ".product:after {width: 0; height: 0;" +
-      // " display: block; content: ''; border-top: "+ newTopRight +" solid #eee;" +
-      // " border-right: "+ newTopRight +" solid transparent;}";
-
-      // const scaleDivDep = 0.00341277127;
-      // let aboutBlock = document.querySelectorAll(".about");
-      // for (let i = 0; i < aboutBlock.length; i++){
-      //   aboutBlock[i].getElementsByTagName('h1')[0].style.transform = "scale(" + productWidth * scaleDivDep + ")";
-      // }
-
-      // let about = document.querySelectorAll(".about");
-      // for (let i = 0; i < about.length; i++){
-      //   for (let j = 0; j < about[i].children.length; j++){
-      //     let el = about[i].children[j];
-      //     let eWidth = getComputedStyle(el).fontSize.slice(0,-2);
-      //     let eHeight = getComputedStyle(el).fontSize.slice(0,-2);
-      //     let scale = Math.min(
-      //       0.1433 * productWidth
-      //     );
-      //     console.log("scale: " + scale);
-      //     console.log("eWidth: " + eWidth);
-      //     console.log("productWidth: " + productWidth);
-      //     console.log("----------------------");
-      //     el.style.fontSize = scale + "px";
-      //   }
-      // }
-      // let scale =  Math.min(
-      //   productWidth/
-      // );
-    // }
 
     function resizeBaseContainer(className){
       let container = document.getElementsByClassName(className)[0]; // base container
